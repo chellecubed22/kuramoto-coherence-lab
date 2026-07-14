@@ -1,0 +1,36 @@
+{
+  "version": "1.1.0",
+  "n_nodes_default": 100,
+  "networks": {
+    "meanfield": {
+      "generator": "all-to-all excluding self",
+      "parameters": {}
+    },
+    "lattice": {
+      "generator": "1D ring lattice",
+      "parameters": {}
+    },
+    "smallworld": {
+      "generator": "Watts-Strogatz",
+      "parameters": {
+        "k": 4,
+        "p_rewire": 0.15
+      }
+    },
+    "scalefree": {
+      "generator": "Barabasi-Albert preferential attachment",
+      "parameters": {
+        "m": 2
+      }
+    },
+    "symmetricmodules": {
+      "generator": "4x25 modular with intra rewiring and inter bridges",
+      "parameters": {
+        "n_modules": 4,
+        "nodes_per_module": 25,
+        "p_in_grid": [0.05, 0.10, 0.20],
+        "c_inter_grid": [0.02, 0.05, 0.10, 0.20, 0.50]
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "version": "1.2.0",
+  "description": "Canonical simulation parameters for Alpha Resonance Kuramoto suite v1.2",
+  "integration": {
+    "dt": 0.01,
+    "total_time": 6.0,
+    "scheme": "Euler-Maruyama"
+  },
+  "alpha": 0.0072973525692838015,
+  "kappa_cap_default": 0.95,
+  "noise_levels": [0.01, 0.02],
+  "success_criterion": {
+    "ci_target": 0.75,
+    "fraction_required": 0.90
+  },
+  "init_modes": {
+    "near_sync": "Phases ~ N(0, 0.15); tests coherence retention (legacy v1.0)",
+    "random": "Uniform phases on [0, 2pi); tests coherence formation (v1.1 required)"
+  },
+  "matched_kappa_eff_targets": [0.05, 0.10, 0.20, 0.50],
+  "seeds": {
+    "primary": [3, 5, 12, 17],
+    "uncertainty": [3, 5, 12, 17, 23, 29, 31, 41]
+  },
+  "cap_sensitivity": [0.8, 0.95, 0.99, "no_cap"],
+  "scaling_betas": [0.5, 1.0, 1.5, 2.0],
+  "candidate_mechanisms": [
+    "none",
+    "noise_suppression",
+    "freq_narrowing",
+    "residual_meanfield"
+  ],
+  "notes": [
+    "kappa_eff (alpha on) = min(kappa_bare / alpha^beta, kappa_cap) — GAIN MAP ONLY",
+    "kappa_eff (alpha off) = min(kappa_bare, kappa_cap)",
+    "Matched-kappa_eff controls hold kappa_eff fixed across alpha on/off",
+    "Candidate mechanisms are tested at fixed_kappa_eff with gain map off",
+    "No biological or physical claim without external empirical validation"
+  ]
+}

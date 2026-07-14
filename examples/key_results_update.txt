@@ -1,0 +1,47 @@
+KEY RESULTS — CLAIM-CALIBRATED BRIEF (v1.2.0)
+Generated: 2026-07-09 17:23:23 UTC
+
+TITLE
+  "Alpha-Scaled Gain Rescaling in Noisy Kuramoto Networks:
+   A Conditional Simulation Study"
+
+TASK 1 — ALPHA IS NOT SPECIAL (gain map)
+  The 1/α gain map is a dial rescaling of κ_bare → κ_eff only.
+  Matched-κ_eff α-on/off (random IC, κ*=0.1):
+    mean(Δ mean_CI on−off) = 0.000000
+    max |Δ mean_CI|         = 0.000000
+    fraction match          = 1.000
+  => no residual alpha-specific effect under pure gain rescaling.
+
+TASK 2–3 — CANDIDATE MECHANISMS BEYOND GAIN MAP
+  Tested at FIXED κ_eff (gain map off): none vs
+  noise_suppression | freq_narrowing | residual_meanfield.
+  Meanfield, κ_eff=0.1:
+  noise_suppression: mean ΔCI vs none = +0.0001, isolated rate = 0.00
+  freq_narrowing: mean ΔCI vs none = +0.0017, isolated rate = 0.25
+  residual_meanfield: mean ΔCI vs none = +0.0409, isolated rate = 1.00
+  Details: summary_candidate_mechanisms.csv
+           summary_candidate_mechanisms_uncertainty.csv
+  These are computational hypotheses, NOT proven physics.
+
+TASK 4 — BIOLOGY / PHYSICS BOUNDARY
+  No biological, medical, energy, or universal-theory claim is supported
+  by this suite alone. External empirical validation is required:
+  see EMPIRICAL_VALIDATION.md and CLAIMS.md.
+
+FORMATION / FAILURES
+  Mean initial CI (random IC) ≈ 0.1005
+  Explicit genuine failures archived: 5
+
+DO NOT CLAIM
+  - alpha-specific synchronization as established fact
+  - lower effective coupling threshold from nominal κ_bare ratios
+  - physical 1/α amplification in nature
+  - biophysical mechanism without independent data
+
+FILES
+  CLAIMS.md, EMPIRICAL_VALIDATION.md
+  summary_matched_kappa_eff.csv
+  summary_candidate_mechanisms.csv
+  summary_formation_and_failures.csv
+  seed_ledger.csv, EXPECTED_HASHES.sha256, methods.txt

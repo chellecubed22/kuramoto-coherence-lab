@@ -1,0 +1,56 @@
+Alpha-Scaled Gain Rescaling in Noisy Kuramoto Networks
+Methods (Simulation Suite v1.1.0)
+Generated: 2026-07-09 17:23:23 UTC
+
+MODEL
+  Kuramoto network on graph G:
+    dθ_i/dt = ω_i + (κ_eff/deg_i) Σ_j A_ij sin(θ_j - θ_i) + ξ_i
+  α ON:  κ_eff = min(κ_bare / α^β, κ_cap)
+  α OFF: κ_eff = min(κ_bare, κ_cap)
+  CI(t) = |mean_i exp(i θ_i)|
+  E_eff = N · κ_eff² · α⁻¹  (model-scale, not physical joules)
+
+INITIAL CONDITIONS (v1.1 correction)
+  near_sync: θ_i ~ N(0, 0.15)   — retention (legacy v1.0)
+  random:    θ_i ~ U[0, 2π)     — formation (required control)
+
+MATCHED-κ_eff CONTROL (v1.1 correction)
+  For target κ*: set α-off κ_bare = κ*
+  set α-on  κ_bare = κ* · α^β  so κ_eff matches (pre-cap).
+  Same seed => same IC and noise stream.
+  Expectation if α only rescales gain: statistically equivalent dynamics.
+
+CANDIDATE MECHANISMS BEYOND GAIN MAP (v1.2)
+  Hold κ_eff fixed (fixed_kappa_eff); gain map off.
+  none | noise_suppression (σ→σ·α) | freq_narrowing (σ_ω→σ_ω·α/0.05)
+  | residual_meanfield (extra κ_res·R·sin(ψ-θ)).
+  Hypotheses only — not physical claims.
+
+INTEGRATION
+  dt = 0.01
+  total_time = 6.0
+  scheme: Euler–Maruyama
+
+CAP HANDLING
+  default κ_cap = 0.95
+  sensitivity: 0.8, 0.95, 0.99, no_cap
+
+RANDOM SEEDS
+  all seeds recorded: [3, 5, 12, 17, 23, 29, 31, 41]
+  primary: [3, 5, 12, 17]
+  uncertainty: [3, 5, 12, 17, 23, 29, 31, 41]
+  full ledger: seed_ledger.csv
+
+α (fine-structure constant) = 0.0072973526
+
+SUCCESS CRITERION
+  CI ≥ 0.75 for ≥ 90% of integration window
+
+CODE VERSION: alpha_resonance_os v1.2.0
+
+CONFIG FILES
+  config/parameters.json
+  config/networks.json
+
+CLAIM BOUNDARY
+  See CLAIMS.md and EMPIRICAL_VALIDATION.md

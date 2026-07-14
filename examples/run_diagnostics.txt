@@ -1,0 +1,11 @@
+RUN DIAGNOSTICS
+- LEGACY NOTICE: simulation_meanfield_alpha_on_cap0.95_kb0.010000_noise0.01_seed17_icnear_sync_legacy.csv starts at CI=0.987 (retention test, not formation)
+- LEGACY NOTICE: simulation_smallworld_alpha_off_cap0.95_kb0.020000_noise0.02_seed03_icnear_sync_legacy.csv starts at CI=0.987 (retention test, not formation)
+- LEGACY NOTICE: simulation_scalefree_alpha_on_cap0.95_kb0.080000_noise0.01_seed12_icnear_sync_legacy.csv starts at CI=0.991 (retention test, not formation)
+- LEGACY NOTICE: simulation_symmetricmodules_alpha_on_cap0.95_cinter0.10_pin0.05_kb0.015000_noise0.02_seed05_icnear_sync_legacy.csv starts at CI=0.991 (retention test, not formation)
+- GENUINE FAILURE archived: simulation_meanfield_alpha_off_cap0.95_kb0.010000_noise0.02_seed17_icrandom_explicit_failure.csv initial_CI=0.164 final_CI=0.164
+- GENUINE FAILURE archived: simulation_lattice_alpha_off_cap0.95_kb0.020000_noise0.02_seed05_icrandom_explicit_failure.csv initial_CI=0.034 final_CI=0.031
+- GENUINE FAILURE archived: simulation_smallworld_alpha_off_cap0.95_kb0.020000_noise0.02_seed12_icrandom_explicit_failure.csv initial_CI=0.133 final_CI=0.145
+- GENUINE FAILURE archived: simulation_scalefree_alpha_off_cap0.95_kb0.020000_noise0.02_seed03_icrandom_explicit_failure.csv initial_CI=0.071 final_CI=0.072
+- GENUINE FAILURE archived: simulation_symmetricmodules_alpha_off_cap0.95_cinter0.02_pin0.05_kb0.020000_noise0.02_seed05_icrandom_explicit_failure.csv initial_CI=0.034 final_CI=0.028
+- no_cap random: re-run dt=0.005 min_CI 0.164->0.164

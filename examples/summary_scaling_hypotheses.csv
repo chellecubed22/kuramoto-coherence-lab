@@ -1,0 +1,8 @@
+rank,form,beta,threshold_kappa_bare,mean_CI,kappa_eff,rank_score,note
+1,kappa_bare/alpha^1.5,1.5,0.005,0.9987,0.95,200.15,nominal-threshold ranking only; not matched-keff
+2,kappa_bare/alpha^2.0,2.0,0.005,0.9987,0.95,200.2,nominal-threshold ranking only; not matched-keff
+3,kappa_bare/(0.0+1.0*alpha),,0.005,0.9982,0.6852,200.0,nominal-threshold ranking only; not matched-keff
+4,kappa_bare/alpha^1.0,1.0,0.005,0.9982,0.6852,200.1,nominal-threshold ranking only; not matched-keff
+5,kappa_bare/alpha^0.5,0.5,0.005,0.9892,0.0585,200.05,nominal-threshold ranking only; not matched-keff
+6,kappa_bare/(0.5+0.5*alpha),,0.005,0.986,0.0099,200.0,nominal-threshold ranking only; not matched-keff
+7,kappa_bare/(1.0+0.0*alpha),,0.005,0.9856,0.005,200.0,nominal-threshold ranking only; not matched-keff
