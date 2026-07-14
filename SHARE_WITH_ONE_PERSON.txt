@@ -1,0 +1,32 @@
+Subject: 10-minute test — Kuramoto Coherence Lab
+
+Hi —
+
+Could you help me with a quick technical test? No theory required.
+
+1) Install Python 3.10+ if you don't have it: https://www.python.org/downloads/
+   (On Windows, check "Add python.exe to PATH")
+
+2) Get the project:
+   - GitHub (preferred): https://github.com/Chellecubed22/kuramoto-coherence-lab
+     git clone https://github.com/Chellecubed22/kuramoto-coherence-lab.git
+   - Or unzip the share package I sent.
+
+3) In a terminal, inside the project folder:
+
+   Windows PowerShell:
+     python -m venv .venv
+     .\.venv\Scripts\Activate.ps1
+     pip install -r requirements.txt
+     python run_framework.py --quick
+
+   Mac/Linux:
+     python3 -m venv .venv
+     source .venv/bin/activate
+     pip install -r requirements.txt
+     python run_framework.py --quick
+
+4) Reply with: did it work? Paste the last ~20 lines of output.
+
+Thank you!
+Michelle
