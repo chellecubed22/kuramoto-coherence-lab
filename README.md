@@ -88,3 +88,12 @@ MIT — see [LICENSE](LICENSE).
 ## Contact
 
 Michelle D. Williams — `chellecubed22@outlook.com`
+
+---
+
+## Related: Daily Check-In (for people)
+
+Optional 60-second human check-in (not part of the simulation):
+
+**https://chellecubed22.github.io/daily-checkin/**
+
